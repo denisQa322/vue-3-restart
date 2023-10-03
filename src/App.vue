@@ -1,11 +1,20 @@
 <template>
   <div class="app">
+    <post-form/>
+    <post-list/>
   </div>
 </template>
 
 
 <script>
+
+import PostForm from './Components/PostForm.vue'
+import PostList from './Components/PostList.vue'
+
 export default {
+  components: {
+    PostList, PostForm 
+    },
     data(){
         return {
             posts:[
@@ -32,7 +41,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 *{
     margin: 0;
     padding: 0;
